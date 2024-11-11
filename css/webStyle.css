@@ -1,0 +1,25 @@
+/* Scrollbar en navegadores basados en WebKit */
+::-webkit-scrollbar {
+    width: 10px;        /* Ancho del scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;        /* Color del fondo del track del scrollbar */
+    border-radius: 10px;        /* Redondeado del track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #24ebac;      /* Color del thumb del scrollbar */
+    border-radius: 10px;        /* Redondeado del thumb */
+    border: 3px solid #f0f0f0;      /* Borde alrededor del thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #1abc9c;      /* Color del thumb al pasar el ratón por encima */
+}
+
+/* Scrollbar en Firefox */
+* {
+    scrollbar-width: thin;      /* Tamaño del scrollbar: thin, auto, none */
+    scrollbar-color: #24ebac #f0f0f0;       /* Color del thumb y del track */
+}
