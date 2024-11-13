@@ -49,6 +49,7 @@ header{
     background: #0b1120;
     position: relative;
     width: 250px;
+    min-width: 250px;
     color: #acacac;
     padding: 20px;
     overflow: hidden;
@@ -160,6 +161,7 @@ ul a{
 }
 
 main{
+    min-width: 1030px;
     flex: 1;        /* Toma el espacio restante a la derecha del header */
     padding: 20px;
     overflow-x: hidden;
@@ -256,6 +258,7 @@ main::before{
 }
 
 .projects{
+    position: relative;
     background-color: #151c28;
     width: 300px;
     margin: 20px;
@@ -266,6 +269,35 @@ main::before{
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
+}
+
+.tech-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(129, 129, 129, 0.8);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.tech-overlay h3{
+    margin-bottom: 10px;
+}
+
+/* Mostrar la superposición al hacer hover sobre el div .projects */
+.projects:hover .tech-overlay{
+    opacity: 1;
 }
 
 .projects:hover{
@@ -329,20 +361,15 @@ main::before{
     margin: auto;
 }
 
-/* #contact-info{
-    background: #0b1120;
-    margin: 0 15px;
-    padding: 30px;
-    border-radius: 5px;
-} */
-
 #contact-info{
-    background: #151c28;
-    text-align: center;
     padding: 1.5rem;
     border-radius: 5px;
     width: 450px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contact-info a{
+    font-weight: bold;
+    color: white;
 }
 
 #form-container{
@@ -350,8 +377,28 @@ main::before{
     text-align: center;
     padding: 1.5rem;
     border-radius: 5px;
-    width: 450px;
+    width: 490px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#form-container input, textarea{
+    width: 100%;
+    border-radius: 4px;
+    margin: 3px 0;
+    padding: 4px;
+}
+
+#form-container textarea{
+    height: auto;
+}
+
+#form-container input[type="submit"]{
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    margin: 3px 0;
+    background-color: #27ffbb;
+    font-weight: bold;
 }
 
 .theme-switch{
@@ -409,6 +456,13 @@ input:checked + .slider{
 input:checked + .slider:before{
     transform: translateX(100%);
     box-shadow: inset 8px -4px 0px 0px #fff000;
+}
+
+#footer{
+    border-top: 1px solid rgb(156, 156, 156);
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 /* Light Mode */
