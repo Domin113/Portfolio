@@ -233,6 +233,18 @@ main::before{
     z-index: -1; 
 }
 
+#aboutMe{
+    margin: 0 auto;
+    width: 700px;
+    font-size: 17px;
+    padding: 4rem 0;
+}
+
+#cv{
+    color: white;
+    font-size: 20px;
+}
+
 #work{
     color: #24ebac;
     margin-top: 10px;

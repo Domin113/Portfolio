@@ -83,10 +83,20 @@
             </section>
             <section id="about">
                 <div class="container">
-                    <div class="title"><h2><span class="nums">01. </span>SOBRE MI</h2></div>
-                    <span id="cv">Descargar CV <br> <img src="./images/icons/descarga4.png" alt="Descargar"></span>
+                    <div class="title"><h2><span class="nums">01. </span>SOBRE MI</h2></div><br>
+                    <div id="aboutMe">
+                        <p>Me llamo Domingoy soy desarrollador web junior. Estoy motivado por aprender continuamente,
+                        enfrentar nuevos retos y aportar valor en proyectos innovadores.</p><br>
 
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <p>Durante mi trayectoria, he trabajado en la implementación y mejora de aplicaciones en el periodo de FCT, perfeccionando su diseño y resolviendo errores
+                        para garantizar una experiencia óptima para el usuario. Además, cuento con experiencia previa en el área de sistemas informáticos,
+                        incluyendo instalación de redes y resolución de fallos de conexión.</p><br>
+
+                        <p>Me definen la constancia, la empatía, y una actitud resolutiva, cualidades que me permiten integrarme eficazmente en equipos y adaptarme
+                        a entornos dinámicos. Busco una oportunidad laboral donde pueda aplicar mis habilidades técnicas y seguir creciendo profesionalmente.</p><br>
+                        <a href=""><span id="cv">Descargar CV <!-- <img src="./images/icons/descarga4.png" alt="Descargar"> --></span></a>
+                    </div>
+                    <br><br>
                 </div>
             </section>
             <section id="portfolio">
@@ -189,18 +199,18 @@
                         </div>
                         <div id="form-container">
                             <div id="form">
-                                <form action="" id="contact-form">
+                                <form action="./php/mail.php" id="contact-form">
                                     <div>
-                                        <input id="name" name="name" placeholder="Nombre *" type="text" value="">
+                                        <input id="name" name="name" placeholder="Nombre *" type="text" value="" required>
                                     </div>
                                     <div>
-                                        <input id="email" name="email" placeholder="Correo *" type="text" value="">
+                                        <input id="email" name="email" placeholder="Correo *" type="text" value="" required>
                                     </div>
                                     <div>
-                                        <input id="subjet" name="subjet" placeholder="Asunto *" type="text" value="">
+                                        <input id="subjet" name="subjet" placeholder="Asunto *" type="text" value="" required>
                                     </div>
                                     <div>
-                                        <textarea id="message" name="message" placeholder="Mensaje *" rows="4"></textarea>
+                                        <textarea id="message" name="message" placeholder="Mensaje *" rows="4" required></textarea>
                                     </div>
                                     <div>
                                         <input id="send" type="submit" value="Enviar">
